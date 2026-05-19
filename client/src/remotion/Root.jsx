@@ -1,6 +1,7 @@
 import React from "react";
 import { Composition } from "remotion";
 import HeartBurstIntro from "./compositions/HeartBurstIntro";
+import StarWarsIntro from "./compositions/StarWarsIntro";
 import LyricalTextReveal from "./compositions/LyricalTextReveal";
 import EnvelopeOpen from "./compositions/EnvelopeOpen";
 import KenBurnsSlideshow from "./compositions/KenBurnsSlideshow";
@@ -16,6 +17,14 @@ export const RemotionRoot = () => {
         id="HeartBurstIntro"
         component={HeartBurstIntro}
         durationInFrames={90}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="StarWarsIntro"
+        component={StarWarsIntro}
+        durationInFrames={300}
         fps={30}
         width={1080}
         height={1920}

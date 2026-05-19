@@ -24,53 +24,21 @@ const config = {
   // ==== MEMORIES PAGE ====
   memoriesPage: {
     title: "Our Story",
-    // 8 milestones: entries with imgName show a photo frame, entries without are title cards
+    // 12 photos in filename order. One-word labels combine in order to form:
+    // "Every chapter with you has been my favorite story yet to write ♥"
     milestones: [
-      {
-        id: 1,
-        imgName: "IMG_3718.jpeg",
-        date: "[DATE 1]",
-        label: "[MILESTONE 1]",
-      },
-      {
-        id: 2,
-        date: "[DATE 2]",
-        label: "[MILESTONE 2]",
-      },
-      {
-        id: 3,
-        imgName: "IMG_4130.jpeg",
-        date: "[DATE 3]",
-        label: "[MILESTONE 3]",
-      },
-      {
-        id: 4,
-        date: "[DATE 4]",
-        label: "[MILESTONE 4]",
-      },
-      {
-        id: 5,
-        imgName: "IMG_4717.jpeg",
-        date: "[DATE 5]",
-        label: "[MILESTONE 5]",
-      },
-      {
-        id: 6,
-        date: "[DATE 6]",
-        label: "[MILESTONE 6]",
-      },
-      {
-        id: 7,
-        imgName: "IMG_5017.jpeg",
-        date: "[DATE 7]",
-        label: "[MILESTONE 7]",
-      },
-      {
-        id: 8,
-        imgName: "IMG_4363.jpeg",
-        date: "[DATE 8]",
-        label: "[MILESTONE 8]",
-      },
+      { id: 1, imgName: "IMG_1189.jpg", date: "", label: "Every" },
+      { id: 2, imgName: "IMG_2416.JPG", date: "", label: "chapter" },
+      { id: 3, imgName: "IMG_3155.jpeg", date: "", label: "with" },
+      { id: 4, imgName: "IMG_3601.jpeg", date: "", label: "you" },
+      { id: 5, imgName: "IMG_3718.jpeg", date: "", label: "has" },
+      { id: 6, imgName: "IMG_4130.jpeg", date: "", label: "been" },
+      { id: 7, imgName: "IMG_4363.jpeg", date: "", label: "my" },
+      { id: 8, imgName: "IMG_4717.jpeg", date: "", label: "favorite" },
+      { id: 9, imgName: "IMG_5017.jpeg", date: "", label: "story" },
+      { id: 10, imgName: "IMG_5584.jpeg", date: "", label: "yet" },
+      { id: 11, imgName: "IMG_8298.jpeg", date: "", label: "to" },
+      { id: 12, imgName: "IMG_9501.jpeg", date: "", label: "write ♥" },
     ],
   },
 

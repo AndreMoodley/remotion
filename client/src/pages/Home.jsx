@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Player } from "@remotion/player";
 import config from "../config/config";
-import HeartBurstIntro from "../remotion/compositions/HeartBurstIntro";
+import StarWarsIntro from "../remotion/compositions/StarWarsIntro";
 import LyricalTextReveal from "../remotion/compositions/LyricalTextReveal";
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
 
   useEffect(() => {
     if (!showIntro) return;
-    const t = setTimeout(() => setShowIntro(false), 3000);
+    const t = setTimeout(() => setShowIntro(false), 10000);
     return () => clearTimeout(t);
   }, [showIntro]);
 
@@ -92,8 +92,8 @@ function Home() {
             className="absolute inset-0 pointer-events-none"
           >
             <Player
-              component={HeartBurstIntro}
-              durationInFrames={90}
+              component={StarWarsIntro}
+              durationInFrames={300}
               fps={30}
               compositionWidth={1080}
               compositionHeight={1920}
