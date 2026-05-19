@@ -24,27 +24,28 @@ const config = {
   // ==== MEMORIES PAGE ====
   memoriesPage: {
     title: "Our Story",
-    // 17 photos. One-word labels combine in order to form:
-    // "Every chapter with you has been my favorite story yet to write
+    // 18 photos in story-progression order. One-word labels combine to form:
+    // "Every chapter with you has been my favorite love story yet to write
     //  and I love you forever ♥"
     milestones: [
-      { id: 1, imgName: "IMG_1189.jpg", date: "", label: "Every" },
-      { id: 2, imgName: "IMG_2416.JPG", date: "", label: "chapter" },
-      { id: 3, imgName: "IMG_3155.jpeg", date: "", label: "with" },
-      { id: 4, imgName: "IMG_3601.jpeg", date: "", label: "you" },
-      { id: 5, imgName: "IMG_3718.jpeg", date: "", label: "has" },
-      { id: 6, imgName: "IMG_4130.jpeg", date: "", label: "been" },
-      { id: 7, imgName: "IMG_4363.jpeg", date: "", label: "my" },
-      { id: 8, imgName: "IMG_4717.jpeg", date: "", label: "favorite" },
-      { id: 9, imgName: "IMG_5017.jpeg", date: "", label: "story" },
-      { id: 10, imgName: "IMG_5584.jpeg", date: "", label: "yet" },
-      { id: 11, imgName: "IMG_8298.jpeg", date: "", label: "to" },
-      { id: 12, imgName: "IMG_9501.jpeg", date: "", label: "write" },
-      { id: 13, imgName: "NEW_01.jpeg", date: "", label: "and" },
-      { id: 14, imgName: "NEW_02.jpeg", date: "", label: "I" },
-      { id: 15, imgName: "NEW_03.jpeg", date: "", label: "love" },
-      { id: 16, imgName: "NEW_04.jpeg", date: "", label: "you" },
-      { id: 17, imgName: "NEW_05.jpeg", date: "", label: "forever ♥" },
+      { id: 1, imgName: "IMG_8298.jpeg", date: "", label: "Every" },
+      { id: 2, imgName: "IMG_1189.jpg", date: "", label: "chapter" },
+      { id: 3, imgName: "IMG_9501.jpeg", date: "", label: "with" },
+      { id: 4, imgName: "NEW_03.jpeg", date: "", label: "you" },
+      { id: 5, imgName: "NEW_04.jpeg", date: "", label: "has" },
+      { id: 6, imgName: "IMG_2416.JPG", date: "", label: "been" },
+      { id: 7, imgName: "NEW_06.jpeg", date: "", label: "my" },
+      { id: 8, imgName: "IMG_3155.jpeg", date: "", label: "favorite" },
+      { id: 9, imgName: "IMG_3601.jpeg", date: "", label: "love" },
+      { id: 10, imgName: "IMG_4130.jpeg", date: "", label: "story" },
+      { id: 11, imgName: "IMG_4363.jpeg", date: "", label: "yet" },
+      { id: 12, imgName: "IMG_4717.jpeg", date: "", label: "to" },
+      { id: 13, imgName: "IMG_5017.jpeg", date: "", label: "write" },
+      { id: 14, imgName: "IMG_5584.jpeg", date: "", label: "and" },
+      { id: 15, imgName: "NEW_05.jpeg", date: "", label: "I" },
+      { id: 16, imgName: "NEW_02.jpeg", date: "", label: "love" },
+      { id: 17, imgName: "NEW_01.jpeg", date: "", label: "you" },
+      { id: 18, imgName: "NEW_07.jpeg", date: "", label: "forever ♥" },
     ],
   },
 
