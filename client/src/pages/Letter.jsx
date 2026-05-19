@@ -21,6 +21,7 @@ function Letter() {
 
   useEffect(() => {
     const audio = new Audio(songFile);
+    audio.muted = true;
     audio.volume = 0.5;
     audio.loop = true;
     const playPromise = audio.play();

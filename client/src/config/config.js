@@ -36,16 +36,16 @@ const config = {
       { id: 6, imgName: "IMG_2416.JPG", date: "", label: "been" },
       { id: 7, imgName: "NEW_06.jpeg", date: "", label: "my" },
       { id: 8, imgName: "IMG_3155.jpeg", date: "", label: "favorite" },
-      { id: 9, imgName: "IMG_3601.jpeg", date: "", label: "love" },
+      { id: 9, imgName: "IMG_3601.jpeg", date: "", label: "wuv" },
       { id: 10, imgName: "IMG_4130.jpeg", date: "", label: "story" },
       { id: 11, imgName: "IMG_4363.jpeg", date: "", label: "yet" },
       { id: 12, imgName: "IMG_4717.jpeg", date: "", label: "to" },
       { id: 13, imgName: "IMG_5017.jpeg", date: "", label: "write" },
       { id: 14, imgName: "IMG_5584.jpeg", date: "", label: "and" },
       { id: 15, imgName: "NEW_05.jpeg", date: "", label: "I" },
-      { id: 16, imgName: "NEW_02.jpeg", date: "", label: "love" },
+      { id: 16, imgName: "NEW_02.jpeg", date: "", label: "wuvv" },
       { id: 17, imgName: "NEW_01.jpeg", date: "", label: "you" },
-      { id: 18, imgName: "NEW_07.jpeg", date: "", label: "forever ♥" },
+      { id: 18, imgName: "NEW_07.jpeg", date: "", label: "eternally ♥" },
     ],
   },
 
@@ -140,42 +140,36 @@ const config = {
 
   // ==== LETTER PAGE ====
   letterPage: {
-    customMessage: `To my bbbyyyyy,
+    customMessage: `To my wifffeeeyyyyyy,
 
-  I wuv you so so so so so so so so so so so so so muchhhh and everyday I am so thankful you are mine,
+  I can cant believe its been a whole year since we started our story meow i am so in wuv with you.🥹
 
-  to me it feels like we have been married for a eternity and i dont know how to explain it but every moment
+  I wuv you so sho shoo shhooooo shhhoohooo muchhhh mi amor and its been the best 400 days of my life, 
 
-  with you good or bad i am truly grateful and I geniuley see you as my other half and partner in this life
+  ever since i first ask you to record from the very first day i was addicted. the glow in your eyes and
 
-  we will share together on earth. I know times have been tough recently and its been hard to deal with me
+  the life you breathed into me, in knew instantly you were the one, even if you think i am lying it is my
 
-  but to me it shows me just how much i can love my gwacie and fight for you, as i never for one moment stopped
+  truth that i have loved you despite not knowing it since the day i met you, like they say "love at first sight" 
+  
+  and i am so grateful for i have got to play with you everyday for a entire year :0 and i am so so gwateful for all the compramises
 
-  loving you despite all our fights and hard times and this brings me back to what they say you know "through
+  and sacrifices you have made for me and our relationship and i want you to know that i see it all and i appreciate it
+  
+  every single thing you have done. I wuv you with all my heart my gwacie and i am so lucky i get to continue 
 
-  the good and bad times" I will always love my bbyyyy so never ever ever ever ever forget that my love and always
+  loving you and making you happy for the rest of our lives together. I know we have had our ups and downs but to me
 
-  remember your dudu is here for you and wuvs you eternally and is so so so excited to explore the world and life
+  but i wouldnt trade it for the world, I wuv you bbbyyy and i cant wait for another year of love and play, 
 
-  with you and cant wait for every new memory that comes along the way <3 Also I want to take the momment and thank
+  thank youuuuu shooo muchh for being mine and making me the happiest man in existance :)))))) 
 
-  you for every single thing you do for me and i appreciate all the little things like my baby callig me texting
+  I WUV WUV WUV WUV WUV YOUUUUUU
 
-  me and giving me attention even though you have a million different things to do and you are a busy busy girl
-
-  so once again bby i appreciate everything and thank you so so so much for being mine and making me the luckiest
-
-  guy in the UNIVERSEEEEE I WUVVV YOUUU MY BBYYYYYYYY SOOOOOOOOO
-
-  BBYYY you truly make me the happiest most grateful man on this earth — here's to one incredible year together
-
-  and to every adventure that comes next.
-
-  🥹🥹🥹
+  MINA MOREEEEEE
 
   Love,
-Andre ❤️`,
+     DUDU ❤️`,
     placeholder: {
       default: `Now, I want you to write me a letter :) Once you click "Send Message" I'll be able to see it hehe`,
       emptyInput: "You have to write me something first!! ):",
