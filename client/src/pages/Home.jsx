@@ -17,7 +17,7 @@ function Home() {
 
   useEffect(() => {
     if (!showIntro) return;
-    const t = setTimeout(() => setShowIntro(false), 10000);
+    const t = setTimeout(() => setShowIntro(false), 18000);
     return () => clearTimeout(t);
   }, [showIntro]);
 
@@ -93,7 +93,7 @@ function Home() {
           >
             <Player
               component={StarWarsIntro}
-              durationInFrames={300}
+              durationInFrames={540}
               fps={30}
               compositionWidth={1080}
               compositionHeight={1920}

@@ -24,7 +24,7 @@ export const RemotionRoot = () => {
       <Composition
         id="StarWarsIntro"
         component={StarWarsIntro}
-        durationInFrames={300}
+        durationInFrames={540}
         fps={30}
         width={1080}
         height={1920}
