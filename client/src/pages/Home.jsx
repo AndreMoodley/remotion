@@ -35,7 +35,7 @@ function Home() {
       }, 350);
     } else {
       setTimeout(() => {
-        navigate("/Valentines");
+        navigate("/anniversary");
       }, 350);
     }
   };

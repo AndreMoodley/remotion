@@ -61,7 +61,7 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
                   draggable={false}
                 />
               ) : (
-                <div className="w-full h-full bg-pink-200 animate-pulse" />
+                <div className="w-full h-full bg-[#2a1f00] animate-pulse" />
               )}
               <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
                 <p className="text-white text-lg font-bold drop-shadow">
@@ -98,8 +98,8 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
             aria-label={`Go to photo ${i + 1}`}
             className={`h-2 rounded-full transition-all ${
               i === activeIndex
-                ? "w-8 bg-pink-400"
-                : "w-2 bg-white/40 hover:bg-white/70"
+                ? "w-8 bg-[#d4a853]"
+                : "w-2 bg-[#d4a853]/30 hover:bg-[#d4a853]/60"
             }`}
           />
         ))}

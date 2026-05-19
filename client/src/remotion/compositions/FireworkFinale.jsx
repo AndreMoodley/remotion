@@ -53,14 +53,14 @@ const Firework = ({ originX, originY, color, startFrame }) => {
 };
 
 const FIREWORKS = [
-  { startFrame: 0, originX: 25, originY: 30, color: "#ff6b9d" },
-  { startFrame: 15, originX: 70, originY: 25, color: "#ffd6e0" },
-  { startFrame: 30, originX: 50, originY: 40, color: "#ff8fa3" },
-  { startFrame: 50, originX: 30, originY: 35, color: "#ffffff" },
-  { startFrame: 65, originX: 75, originY: 45, color: "#ffaec8" },
-  { startFrame: 85, originX: 50, originY: 30, color: "#e85d75" },
-  { startFrame: 105, originX: 20, originY: 40, color: "#ffd6e0" },
-  { startFrame: 125, originX: 80, originY: 35, color: "#ff8fa3" },
+  { startFrame: 0,   originX: 25, originY: 30, color: "#d4a853" },
+  { startFrame: 15,  originX: 70, originY: 25, color: "#f5e6c8" },
+  { startFrame: 30,  originX: 50, originY: 40, color: "#f5c842" },
+  { startFrame: 50,  originX: 30, originY: 35, color: "#ffffff" },
+  { startFrame: 65,  originX: 75, originY: 45, color: "#e8b84b" },
+  { startFrame: 85,  originX: 50, originY: 30, color: "#d4a853" },
+  { startFrame: 105, originX: 20, originY: 40, color: "#f5c842" },
+  { startFrame: 125, originX: 80, originY: 35, color: "#f5e6c8" },
 ];
 
 export const FireworkFinale = () => {
@@ -82,7 +82,7 @@ export const FireworkFinale = () => {
     <AbsoluteFill
       style={{
         background:
-          "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(74,0,0,0.55) 100%)",
+          "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(74,42,0,0.55) 100%)",
       }}
     >
       {FIREWORKS.map((fw, i) => (
@@ -104,12 +104,12 @@ export const FireworkFinale = () => {
             fontSize: "3.4rem",
             fontWeight: 900,
             textShadow:
-              "0 0 24px rgba(255,143,163,0.9), 0 4px 18px rgba(0,0,0,0.6)",
+              "0 0 24px rgba(212,168,83,0.9), 0 4px 18px rgba(0,0,0,0.6)",
             letterSpacing: "0.04em",
             textAlign: "center",
           }}
         >
-          I love you ♥
+          1 Year Together ♥
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

@@ -129,7 +129,7 @@ function Letter() {
       </div>
 
       <button
-        className="mt-8 px-8 py-3 bg-pink-400 text-white rounded-full font-bold shadow-lg hover:bg-pink-500 transition-colors z-50"
+        className="mt-8 px-8 py-3 bg-[#d4a853] text-[#0d0d0d] rounded-full font-bold shadow-lg hover:bg-[#f5c842] transition-colors z-50"
         onClick={() => navigate("/")}
       >
         Back to Home

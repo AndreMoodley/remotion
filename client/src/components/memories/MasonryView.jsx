@@ -28,10 +28,10 @@ function MasonryView({ photos, onOpen }) {
               whileHover={{ y: -6, rotate: 0, scale: 1.03 }}
               onClick={() => onOpen(i)}
               style={{ transform: `rotate(${rot}deg)` }}
-              className="mb-3 sm:mb-4 break-inside-avoid w-full block bg-white p-2 pb-8 rounded-sm shadow-xl relative focus:outline-none focus:ring-2 focus:ring-pink-300 transition-transform"
+              className="mb-3 sm:mb-4 break-inside-avoid w-full block bg-white p-2 pb-8 rounded-sm shadow-xl relative focus:outline-none focus:ring-2 focus:ring-[#d4a853] transition-transform"
               aria-label={`Open ${photo.caption}`}
             >
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-pink-200/80 rotate-[-3deg] shadow z-10" />
+              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-[#d4a853]/60 rotate-[-3deg] shadow z-10" />
               {photo.src ? (
                 <img
                   src={photo.src}
@@ -41,9 +41,9 @@ function MasonryView({ photos, onOpen }) {
                   className="w-full h-auto object-cover"
                 />
               ) : (
-                <div className="w-full h-40 bg-pink-200 animate-pulse" />
+                <div className="w-full h-40 bg-[#c8a86b]/20 animate-pulse" />
               )}
-              <p className="text-center font-semibold text-pink-900 mt-2 text-sm">
+              <p className="text-center font-semibold text-[#5a3e00] mt-2 text-sm">
                 {photo.caption}
               </p>
             </motion.button>

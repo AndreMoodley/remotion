@@ -1,7 +1,7 @@
 .letter-page {
   /* Setting up variables for theming purposes */
   --coffee: #402218;
-  --red: hsla(0, 75%, 75%, 1);
+  --red: #d4a853;
   --coffee-text: #865439;
   --blue: hsla(240, 60%, 75%, 1);
   --primary-color: var(--red);

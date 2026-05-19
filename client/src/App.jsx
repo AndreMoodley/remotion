@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
-import HeartsBackground from "./components/HeartsBackground";
+import AnniversaryBackground from "./components/HeartsBackground";
 import RouteTransition from "./components/RouteTransition";
 import {
   Home,
   Memories,
-  Valentines,
+  Anniversary,
+  PhotoGallery,
   Quiz,
   Letter,
   Drawing,
@@ -15,12 +16,13 @@ import {
 function App() {
   return (
     <>
-      <HeartsBackground />
+      <AnniversaryBackground />
       <RouteTransition>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Valentines" element={<Valentines />} />
+          <Route path="/anniversary" element={<Anniversary />} />
           <Route path="/memories" element={<Memories />} />
+          <Route path="/gallery" element={<PhotoGallery />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/drawing" element={<Drawing />} />
           <Route path="/letter" element={<Letter />} />

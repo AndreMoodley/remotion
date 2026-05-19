@@ -1,69 +1,82 @@
 const config = {
   // ==== HOME PAGE ====
   homePage: {
-    // Number of sentences displayed per slide
-    sentencePerSlide: 2, // Adjust this to control how many sentences are shown per slide
+    sentencePerSlide: 2,
     slides: [
       [
-        "Hola Mina Moreeee",
-        "I hoope you see just how much I love you",
-        // If you set `sentencePerSlide` to 2, the next text won't be visible
-        "Surprise!",
+        "Happy Anniversary, my love",
+        "365 days with you has been everything",
       ],
       [
-        "Another Kawaiii website",
-        "So NOOOO i did not Forget",
+        "Every moment with you",
+        "is a memory I never want to forget",
       ],
-      ["I LOVE GWACIEEE SOOO SOOOO MUCHHHHH."],
-      // You can add more slides or delete slides as needed
+      ["Here's to forever ♥"],
     ],
   },
-// Add this inside your config object
-  // ==== VALENTINE'S PAGE ====
-  valentinesPage: {
-    title: "Happy Valentine's",
-    // Make sure to add your envelope image to assets/images/
-    envelopeSrc: "envelope.png", // Or null if you want CSS only
-    buttonText: "click me!!!",
+
+  // ==== ANNIVERSARY PAGE ====
+  anniversaryPage: {
+    title: "One Year",
+    buttonText: "Our Story",
   },
 
   // ==== MEMORIES PAGE ====
   memoriesPage: {
-    title: "Our Memories",
-    // Data for the polaroids
-    memories: [
+    title: "Our Story",
+    // 8 milestones: entries with imgName show a photo frame, entries without are title cards
+    milestones: [
       {
         id: 1,
-        imgName: "IMG_3718.jpeg", // Replace with your actual file name
-        caption: "Kawaiiii Time",
+        imgName: "IMG_3718.jpeg",
+        date: "[DATE 1]",
+        label: "[MILESTONE 1]",
       },
       {
         id: 2,
-        imgName: "IMG_4130.jpeg", 
-        caption: "More Kawaiii",
+        date: "[DATE 2]",
+        label: "[MILESTONE 2]",
       },
       {
         id: 3,
-        imgName: "IMG_4717.jpeg", 
-        caption: "Another Kawaiii",
+        imgName: "IMG_4130.jpeg",
+        date: "[DATE 3]",
+        label: "[MILESTONE 3]",
       },
       {
         id: 4,
-        imgName: "IMG_5017.jpeg",
-        caption: "Kawaiii",
+        date: "[DATE 4]",
+        label: "[MILESTONE 4]",
       },
       {
         id: 5,
+        imgName: "IMG_4717.jpeg",
+        date: "[DATE 5]",
+        label: "[MILESTONE 5]",
+      },
+      {
+        id: 6,
+        date: "[DATE 6]",
+        label: "[MILESTONE 6]",
+      },
+      {
+        id: 7,
+        imgName: "IMG_5017.jpeg",
+        date: "[DATE 7]",
+        label: "[MILESTONE 7]",
+      },
+      {
+        id: 8,
         imgName: "IMG_4363.jpeg",
-        caption: "Forever Kawaiii",
+        date: "[DATE 8]",
+        label: "[MILESTONE 8]",
       },
     ],
   },
+
   // ==== QUIZ PAGE ====
   quizPage: {
-    // Color of the progress bar
-    progressBarColor: "#cf6b87",
-    // Text labels for the quiz
+    progressBarColor: "#d4a853",
     text: {
       questionLabel: "Question",
       ofLabel: "out of",
@@ -71,16 +84,15 @@ const config = {
       yourScoreLabel: "Your score:",
       nextButtonText: "Go to next page",
     },
-    // Quiz questions and answers
     questions: [
       {
-        id: 1, // Unique ID for the question
+        id: 1,
         title: "who said I love you first?",
         description: "(accidental or not)",
-        correctAnswer: "Gracie", // Correct answer value (must match one of the options' `value`)
+        correctAnswer: "Gracie",
         options: [
           { value: "Andre", label: "Andre" },
-          { value: "Gracie", label: "Gracie" }, 
+          { value: "Gracie", label: "Gracie" },
         ],
       },
       {
@@ -98,39 +110,37 @@ const config = {
       {
         id: 3,
         title: "When did I get your IG?",
-        description: "Don't make the same mistake twice:D",
+        description: "Don't make the same mistake twice :D",
         correctAnswer: "March-14",
         options: [
-          { value: "Feb-29", label: "Febuary 29th" },
+          { value: "Feb-29", label: "February 29th" },
           { value: "March-26", label: "March 26th" },
           { value: "April-1", label: "April 1st" },
           { value: "March-14", label: "March 14th" },
         ],
       },
-      // You can add more questions here
     ],
-    // GIF ANIMATION CONFIGURATION
     gifConfig: [
       {
-        check: (score) => score >= 3, // If score is 3 or above, this GIF will be shown
+        check: (score) => score >= 3,
         heading: "Wow!!!!!!! unbelievable",
-        gifName: "gif4.gif", // Name of the GIF file in `src/assets/gifs`
-        style: "w-44", // Tailwind CSS class for styling the GIF
+        gifName: "gif4.gif",
+        style: "w-44",
       },
       {
-        check: (score) => score === 2, // If score is exactly 2, this GIF will be shown
+        check: (score) => score === 2,
         heading: "Ehhh, not bad! so I still love you",
         gifName: "gif3.gif",
         style: "w-44",
       },
       {
-        check: (score) => score === 1, // If score is exactly 1, this GIF will be shown
+        check: (score) => score === 1,
         heading: "It's okay, I know you tried so hard",
         gifName: "gif2.gif",
         style: "w-44",
       },
       {
-        check: () => true, // Default case (if none of the above conditions are met)
+        check: () => true,
         heading: "umm... wtf???",
         gifName: "gif1.gif",
         style: "w-44",
@@ -140,15 +150,12 @@ const config = {
 
   // ==== DRAWING PAGE ====
   drawingPage: {
-    // Messages displayed on the drawing page
     messages: [
       "Can you draw me a flower",
       "Give me another flower",
       "Draw me one last flower",
     ],
-    // Colors available for drawing
     COLORS: ["#000000", "#FF7043", "#66BB6A", "#42A5F5", "#FFEE58"],
-    // Text for the submit button
     text: {
       submitText: "Submit",
       finalText: "Thank you baby ❤️",
@@ -158,22 +165,21 @@ const config = {
 
   // ==== LETTER PAGE ====
   letterPage: {
-  // Custom message you want to display (your love letter)
-  customMessage: `To my bbbyyyyy,
+    customMessage: `To my bbbyyyyy,
 
   I wuv you so so so so so so so so so so so so so muchhhh and everyday I am so thankful you are mine,
-  
+
   to me it feels like we have been married for a eternity and i dont know how to explain it but every moment
 
-  with you good or bad i am truly grateful and I geniuley see you as my other half and partner in this life 
+  with you good or bad i am truly grateful and I geniuley see you as my other half and partner in this life
 
-  we will share together on earth. I know times have been tough recently and its been hard to deal with me 
+  we will share together on earth. I know times have been tough recently and its been hard to deal with me
 
-  but to me it shows me just how much i can love my gwacie and fight for you, as i never for one moment stopped 
+  but to me it shows me just how much i can love my gwacie and fight for you, as i never for one moment stopped
 
   loving you despite all our fights and hard times and this brings me back to what they say you know "through
 
-  the good and bad times" I will always love my bbyyyy so never ever ever ever ever forget that my love and always 
+  the good and bad times" I will always love my bbyyyy so never ever ever ever ever forget that my love and always
 
   remember your dudu is here for you and wuvs you eternally and is so so so excited to explore the world and life
 
@@ -187,46 +193,37 @@ const config = {
 
   guy in the UNIVERSEEEEE I WUVVV YOUUU MY BBYYYYYYYY SOOOOOOOOO
 
-  BBYYY you truly make me the happiest most grateful man on this earth so would you do me the honors of being 
-  
-  my funny
+  BBYYY you truly make me the happiest most grateful man on this earth — here's to one incredible year together
 
-  Valentine.......
+  and to every adventure that comes next.
 
   🥹🥹🥹
 
   Love,
 Andre ❤️`,
-    // Placeholder text for the letter input
     placeholder: {
       default: `Now, I want you to write me a letter :) Once you click "Send Message" I'll be able to see it hehe`,
       emptyInput: "You have to write me something first!! ):",
       success: "Thank you for the message my love!",
       error: "Failed to send the message. try it again!",
     },
-    // Button text
     buttons: {
       sendMessage: "Send Message",
       clearText: "Clear",
       loading: "Sending...",
     },
-    // API configuration for sending emails
     api: {
       baseURL: `http://localhost:3000`,
-      // Configure this based on your development port (check server/app.js or .env.PORT) and update this to your live backend URL after deployment
-
-      sendEmailEndpoint: "/send-email", // Endpoint for sending emails
+      sendEmailEndpoint: "/send-email",
     },
   },
 
   // ==== CLOSING PAGE ====
   closingPage: {
-    // Final message displayed on the closing page
     message:
-      "Thank you for contributing to this project. I love you with all my heart",
-    // GIF displayed on the closing page
-    gifName: "closing.gif", // Name of the GIF file in `src/assets/gifs`
-    style: "w-44", // Tailwind CSS class for styling the GIF
+      "Thank you for the most incredible year of my life. Here's to forever, my love.",
+    gifName: "closing.gif",
+    style: "w-44",
   },
 };
 
