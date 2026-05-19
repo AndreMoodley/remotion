@@ -54,21 +54,49 @@ function Home() {
     >
       <div className="w-[90%] max-w-[480px] h-[55vh] sm:h-[60vh] relative">
         <AnimatePresence mode="wait">
+          {!showIntro && (
+            <motion.div
+              key={`${currentIndex}-${visibleCount}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="absolute inset-0"
+            >
+              <Player
+                component={LyricalTextReveal}
+                inputProps={{ sentences: revealedSentences }}
+                durationInFrames={revealDuration}
+                fps={30}
+                compositionWidth={540}
+                compositionHeight={720}
+                style={{ width: "100%", height: "100%" }}
+                autoPlay
+                loop={false}
+                controls={false}
+                initiallyMuted
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      <AnimatePresence>
+        {showIntro && (
           <motion.div
-            key={`${currentIndex}-${visibleCount}`}
+            key="intro"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0"
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="absolute inset-0 pointer-events-none"
           >
             <Player
-              component={LyricalTextReveal}
-              inputProps={{ sentences: revealedSentences }}
-              durationInFrames={revealDuration}
+              component={HeartBurstIntro}
+              durationInFrames={90}
               fps={30}
-              compositionWidth={540}
-              compositionHeight={720}
+              compositionWidth={1080}
+              compositionHeight={1920}
               style={{ width: "100%", height: "100%" }}
               autoPlay
               loop={false}
@@ -76,36 +104,13 @@ function Home() {
               initiallyMuted
             />
           </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {showIntro && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 pointer-events-none"
-        >
-          <Player
-            component={HeartBurstIntro}
-            durationInFrames={90}
-            fps={30}
-            compositionWidth={1080}
-            compositionHeight={1920}
-            style={{ width: "100%", height: "100%" }}
-            autoPlay
-            loop={false}
-            controls={false}
-            initiallyMuted
-          />
-        </motion.div>
-      )}
+        )}
+      </AnimatePresence>
 
       <motion.div
         initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 0.7, y: 0 }}
-        transition={{ delay: 1 }}
+        animate={{ opacity: showIntro ? 0 : 0.7, y: 0 }}
+        transition={{ duration: 0.5, delay: showIntro ? 0 : 0.3 }}
         className="absolute bottom-6 text-white/80 text-sm font-medium pointer-events-none drop-shadow-md"
       >
         tap anywhere to continue ♥
