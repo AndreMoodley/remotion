@@ -63,11 +63,6 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
               ) : (
                 <div className="w-full h-full bg-[#2a1f00] animate-pulse" />
               )}
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
-                <p className="text-white text-lg font-bold drop-shadow">
-                  {photo.caption}
-                </p>
-              </div>
             </motion.div>
           );
         })}
