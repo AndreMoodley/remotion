@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import config from "../config/config";
 import FilmstripView from "../components/memories/FilmstripView";
+import CarouselOverlay from "../components/memories/CarouselOverlay";
 
 function Memories() {
   const navigate = useNavigate();
@@ -43,9 +44,32 @@ function Memories() {
   );
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [overlayOpen, setOverlayOpen] = useState(false);
+
+  // Photos shape for CarouselView. Filmstrip may include text-only cards in the
+  // future, so map filmstrip-index <-> photo-index in case they diverge again.
+  const photos = useMemo(
+    () =>
+      milestonesWithImages
+        .filter((m) => !!m.imgName)
+        .map((m) => ({ id: m.id, caption: m.label, src: m.src })),
+    [milestonesWithImages]
+  );
+
+  const filmstripIdxToPhotoIdx = useMemo(() => {
+    const map = {};
+    let p = 0;
+    milestonesWithImages.forEach((m, i) => {
+      if (m.imgName) {
+        map[i] = p++;
+      }
+    });
+    return map;
+  }, [milestonesWithImages]);
 
   // Arrow-key navigation
   useEffect(() => {
+    if (overlayOpen) return;
     const handler = (e) => {
       if (e.key === "ArrowRight")
         setActiveIndex((i) => (i + 1) % milestones.length);
@@ -54,7 +78,21 @@ function Memories() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [milestones.length]);
+  }, [milestones.length, overlayOpen]);
+
+  const handleCardClick = (i) => {
+    setActiveIndex(i);
+    if (milestonesWithImages[i]?.imgName) {
+      setOverlayOpen(true);
+    }
+  };
+
+  const handleOverlayChange = (photoIdx) => {
+    const milestoneIdx = milestonesWithImages.findIndex(
+      (m, i) => filmstripIdxToPhotoIdx[i] === photoIdx
+    );
+    if (milestoneIdx >= 0) setActiveIndex(milestoneIdx);
+  };
 
   return (
     <div className="min-h-[100dvh] flex flex-col overflow-x-hidden relative">
@@ -75,7 +113,7 @@ function Memories() {
         <FilmstripView
           milestones={milestonesWithImages}
           activeIndex={activeIndex}
-          onChangeIndex={setActiveIndex}
+          onChangeIndex={handleCardClick}
         />
       </div>
 
@@ -104,6 +142,14 @@ function Memories() {
           Read Letter
         </motion.button>
       </div>
+
+      <CarouselOverlay
+        open={overlayOpen}
+        photos={photos}
+        activeIndex={filmstripIdxToPhotoIdx[activeIndex] ?? 0}
+        onChangeIndex={handleOverlayChange}
+        onClose={() => setOverlayOpen(false)}
+      />
     </div>
   );
 }
