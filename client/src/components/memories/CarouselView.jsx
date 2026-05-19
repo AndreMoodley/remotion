@@ -67,7 +67,7 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-3 sm:px-4 py-6 touch-pan-y">
+    <div className="w-full max-w-4xl mx-auto px-3 sm:px-4 pt-6 pb-2 touch-pan-y">
       <div className="relative h-[60vh] sm:h-[70vh] flex items-center justify-center select-none">
         {[-1, 0, 1].map((offset) => {
           const idx = getRelative(offset);
@@ -132,7 +132,7 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
       </div>
 
       {/* Scrubber */}
-      <div className="mt-8 mx-6 relative h-8 select-none">
+      <div className="mt-12 mx-8 sm:mx-10 relative h-8 select-none">
         <div
           ref={trackRef}
           onPointerDown={handleTrackPointerDown}
@@ -161,12 +161,12 @@ function CarouselView({ photos, activeIndex, onChangeIndex, onOpen }) {
           style={{ x: thumbX }}
           className="absolute top-1/2 -translate-y-1/2 -ml-2.5 w-5 h-5 rounded-full bg-[#f5c842] shadow-lg border-2 border-[#0d0d0d] cursor-grab active:cursor-grabbing touch-none"
         />
-        <div className="absolute -bottom-5 left-0 right-0 text-center text-[10px] font-mono text-[#d4a853]/60">
+        <div className="absolute -bottom-6 left-0 right-0 text-center text-[10px] font-mono text-[#d4a853]/60">
           {activeIndex + 1} / {total}
         </div>
       </div>
 
-      <p className="mt-8 text-center text-white/70 text-xs sm:text-sm">
+      <p className="mt-10 text-center text-white/70 text-xs sm:text-sm">
         Swipe · flick to skip · drag the bar to jump
       </p>
     </div>

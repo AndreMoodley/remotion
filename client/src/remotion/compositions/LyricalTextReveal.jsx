@@ -10,7 +10,7 @@ import {
 export const LyricalTextReveal = ({ sentences = [] }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const perSentence = 24;
+  const perSentence = 60;
 
   return (
     <AbsoluteFill
@@ -28,12 +28,12 @@ export const LyricalTextReveal = ({ sentences = [] }) => {
         const enter = spring({
           frame: frame - start,
           fps,
-          config: { damping: 14, stiffness: 100 },
+          config: { damping: 22, stiffness: 80 },
         });
-        const slide = interpolate(frame - start, [0, 20], [40, 0], {
+        const slide = interpolate(frame - start, [0, 45], [30, 0], {
           extrapolateRight: "clamp",
         });
-        const opacity = interpolate(frame - start, [0, 18], [0, 1], {
+        const opacity = interpolate(frame - start, [0, 40], [0, 1], {
           extrapolateRight: "clamp",
         });
 

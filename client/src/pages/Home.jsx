@@ -1,10 +1,12 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Player } from "@remotion/player";
 import config from "../config/config";
 import StarWarsIntro from "../remotion/compositions/StarWarsIntro";
 import LyricalTextReveal from "../remotion/compositions/LyricalTextReveal";
+
+const AUTO_ADVANCE_MS = 10000;
 
 function Home() {
   const navigate = useNavigate();
@@ -21,16 +23,12 @@ function Home() {
     return () => clearTimeout(t);
   }, [showIntro]);
 
-  const handleClick = () => {
-    if (showIntro) {
-      setShowIntro(false);
-      return;
-    }
+  const advance = useCallback(() => {
     if (visibleCount < Math.min(sentencePerSlide, currentSlide.length)) {
-      setVisibleCount(visibleCount + 1);
+      setVisibleCount((c) => c + 1);
     } else if (currentIndex < slides.length - 1) {
       setTimeout(() => {
-        setCurrentIndex(currentIndex + 1);
+        setCurrentIndex((i) => i + 1);
         setVisibleCount(1);
       }, 350);
     } else {
@@ -38,6 +36,28 @@ function Home() {
         navigate("/anniversary");
       }, 350);
     }
+  }, [
+    visibleCount,
+    currentIndex,
+    currentSlide.length,
+    sentencePerSlide,
+    slides.length,
+    navigate,
+  ]);
+
+  // Auto-advance each text state after AUTO_ADVANCE_MS; click resets the timer
+  useEffect(() => {
+    if (showIntro) return;
+    const t = setTimeout(advance, AUTO_ADVANCE_MS);
+    return () => clearTimeout(t);
+  }, [showIntro, currentIndex, visibleCount, advance]);
+
+  const handleClick = () => {
+    if (showIntro) {
+      setShowIntro(false);
+      return;
+    }
+    advance();
   };
 
   const revealedSentences = useMemo(
@@ -45,7 +65,7 @@ function Home() {
     [currentSlide, visibleCount]
   );
 
-  const revealDuration = Math.max(60, revealedSentences.length * 24 + 30);
+  const revealDuration = Math.max(120, revealedSentences.length * 60 + 60);
 
   return (
     <div
